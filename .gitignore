@@ -3,6 +3,7 @@
 *.swp
 *.suo
 *.user
+_Resharper*
 
 
 
