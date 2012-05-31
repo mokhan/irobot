@@ -1,4 +1,4 @@
-namespace core
+namespace core.infrastructure
 {
     public interface ISubscribeTo<Event>
     {

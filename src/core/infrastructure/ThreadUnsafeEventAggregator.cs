@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using core.extensions;
 
-namespace core
+namespace core.infrastructure
 {
     public class ThreadUnsafeEventAggregator : IEventAggregator
     {

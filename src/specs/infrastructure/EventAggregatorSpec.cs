@@ -1,8 +1,9 @@
 using Machine.Specifications;
 using Rhino.Mocks;
 using core;
+using core.infrastructure;
 
-namespace specs
+namespace specs.infrastructure
 {
     public class EventAggregatorSpec
     {

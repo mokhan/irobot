@@ -2,6 +2,7 @@
 using Rhino.Mocks;
 using Robocode;
 using core;
+using core.infrastructure;
 
 namespace specs
 {

@@ -1,4 +1,5 @@
 ﻿using Robocode;
+using core.infrastructure;
 
 namespace core
 {

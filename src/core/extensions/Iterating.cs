@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace core
+namespace core.extensions
 {
     public static class Iterating
     {

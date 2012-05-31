@@ -1,4 +1,4 @@
-namespace core
+namespace core.extensions
 {
     public static class Casting
     {
