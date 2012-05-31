@@ -18,62 +18,62 @@ namespace core
 
         public override void OnBulletHit(BulletHitEvent evnt)
         {
-            publisher.Publish(evnt);
+            publisher.publish(evnt);
         }
 
         public override void OnBulletHitBullet(BulletHitBulletEvent evnt)
         {
-            publisher.Publish(evnt);
+            publisher.publish(evnt);
         }
 
         public override void OnBulletMissed(BulletMissedEvent evnt)
         {
-            publisher.Publish(evnt);
+            publisher.publish(evnt);
         }
 
         public override void OnDeath(DeathEvent evnt)
         {
-            publisher.Publish(evnt);
+            publisher.publish(evnt);
         }
 
         public override void OnHitByBullet(HitByBulletEvent evnt)
         {
-            publisher.Publish(evnt);
+            publisher.publish(evnt);
         }
 
         public override void OnHitRobot(HitRobotEvent evnt)
         {
-            publisher.Publish(evnt);
+            publisher.publish(evnt);
         }
 
         public override void OnHitWall(HitWallEvent evnt)
         {
-            publisher.Publish(evnt);
+            publisher.publish(evnt);
         }
 
         public override void OnRobotDeath(RobotDeathEvent evnt)
         {
-            publisher.Publish(evnt);
+            publisher.publish(evnt);
         }
 
         public override void OnScannedRobot(ScannedRobotEvent evnt)
         {
-            publisher.Publish(evnt);
+            publisher.publish(evnt);
         }
 
         public override void OnWin(WinEvent evnt)
         {
-            publisher.Publish(evnt);
+            publisher.publish(evnt);
         }
 
         public override void OnRoundEnded(RoundEndedEvent evnt)
         {
-            publisher.Publish(evnt);
+            publisher.publish(evnt);
         }
 
         public override void OnBattleEnded(BattleEndedEvent evnt)
         {
-            publisher.Publish(evnt);
+            publisher.publish(evnt);
         }
 
         public override bool IsAdjustGunForRobotTurn

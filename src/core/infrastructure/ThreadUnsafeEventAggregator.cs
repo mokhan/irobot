@@ -7,14 +7,14 @@ namespace core.infrastructure
     {
         List<object> subscribers = new List<object>();
 
-        public void RegisterFor<Event>(ISubscribeTo<Event> subscriber)
+        public void register<Event>(ISubscribeTo<Event> subscriber)
         {
             subscribers.Add(subscriber);
         }
 
-        public void Publish<Event>(Event theEvent)
+        public void publish<Event>(Event theEvent)
         {
-            subscribers.Each(x => x.CallAs<ISubscribeTo<Event>>(y => y.Notify(theEvent)));
+            subscribers.each(x => x.call_as<ISubscribeTo<Event>>(y => y.notify(theEvent)));
         }
     }
 }

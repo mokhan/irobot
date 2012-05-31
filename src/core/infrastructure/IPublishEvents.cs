@@ -2,6 +2,6 @@ namespace core.infrastructure
 {
     public interface IPublishEvents
     {
-        void Publish<Event>(Event theEvent);
+        void publish<Event>(Event theEvent);
     }
 }

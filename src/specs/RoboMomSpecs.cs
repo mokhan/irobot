@@ -1,5 +1,4 @@
 ﻿using Machine.Specifications;
-using Rhino.Mocks;
 using Robocode;
 using core;
 using core.infrastructure;
@@ -21,12 +20,12 @@ namespace specs
         {
             It should_publish_the_event = () =>
             {
-                publisher.AssertWasCalled(x => x.Publish(message));
+                publisher.received(x => x.publish(message));
             };
 
             Establish context = () =>
             {
-                message = new BulletHitEvent("blah", 0, new Bullet(0,0,0,0,"","", false, 0));
+                message = new BulletHitEvent("blah", 0, new Bullet(0, 0, 0, 0, "", "", false, 0));
             };
 
             Because of = () =>

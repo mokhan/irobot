@@ -1,6 +1,4 @@
 using Machine.Specifications;
-using Rhino.Mocks;
-using core;
 using core.infrastructure;
 
 namespace specs.infrastructure
@@ -18,21 +16,21 @@ namespace specs.infrastructure
         {
             It should_notify_all_interested_subscribers = () =>
             {
-                handler.AssertWasCalled(x => x.Notify("hello"));
+                subscriber.received(x => x.notify("hello"));
             };
 
             Establish context = () =>
             {
-                handler = MockRepository.GenerateMock<ISubscribeTo<string>>();
+                subscriber = Mock.An<ISubscribeTo<string>>();
             };
 
             Because of = () =>
             {
-                sut.RegisterFor(handler);
-                sut.Publish("hello");
+                sut.register(subscriber);
+                sut.publish("hello");
             };
 
-            static ISubscribeTo<string> handler;
+            static ISubscribeTo<string> subscriber;
         }
     }
 }

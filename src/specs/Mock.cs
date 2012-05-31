@@ -1,3 +1,4 @@
+using System;
 using Rhino.Mocks;
 
 namespace specs
@@ -7,6 +8,11 @@ namespace specs
         public static T An<T>() where T : class
         {
             return MockRepository.GenerateMock<T>();
+        }
+
+        public static void received<T>(this T mock, Action<T> command)
+        {
+            mock.AssertWasCalled(command);
         }
     }
 }
