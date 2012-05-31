@@ -4,6 +4,13 @@ namespace core
 {
     public class RoboMom : Robot
     {
+        readonly IPublishEvents publisher;
+
+        public RoboMom(IPublishEvents publisher)
+        {
+            this.publisher = publisher;
+        }
+
         public override void Run()
         {
             while(true)
@@ -15,7 +22,7 @@ namespace core
 
         public override void OnBulletHit(BulletHitEvent evnt)
         {
-            base.OnBulletHit(evnt);
+            publisher.Publish(evnt);
         }
 
         public override void OnBulletHitBullet(BulletHitBulletEvent evnt)

@@ -1,5 +1,6 @@
 using Machine.Specifications;
 using Rhino.Mocks;
+using core;
 
 namespace specs
 {
