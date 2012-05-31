@@ -43,8 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Casting.cs" />
+    <Compile Include="Dynamic.cs" />
+    <Compile Include="IEventAggregator.cs" />
+    <Compile Include="IEventRegistry.cs" />
+    <Compile Include="IPublishEvents.cs" />
+    <Compile Include="ISubscribeTo.cs" />
+    <Compile Include="Iterating.cs" />
     <Compile Include="RoboMom.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThreadUnsafeEventAggregator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
