@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EventAggregatorSpec.cs" />
+    <Compile Include="Mock.cs" />
     <Compile Include="RoboMomSpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

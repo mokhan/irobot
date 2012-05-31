@@ -16,7 +16,6 @@ namespace specs
         static RoboMom sut;
         static IPublishEvents publisher;
 
-
         public class when_hit
         {
             It should_publish_the_event = () =>
@@ -35,14 +34,6 @@ namespace specs
             };
 
             static BulletHitEvent message;
-        }
-    }
-
-    public static class Mock
-    {
-        public static T An<T>() where T : class
-        {
-            return MockRepository.GenerateMock<T>();
         }
     }
 }

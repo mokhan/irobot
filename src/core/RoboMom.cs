@@ -13,11 +13,6 @@ namespace core
 
         public override void Run()
         {
-            while(true)
-            {
-                TurnLeft(10);
-                Ahead(5);
-            }
         }
 
         public override void OnBulletHit(BulletHitEvent evnt)
@@ -27,60 +22,57 @@ namespace core
 
         public override void OnBulletHitBullet(BulletHitBulletEvent evnt)
         {
-            base.OnBulletHitBullet(evnt);
+            publisher.Publish(evnt);
         }
 
         public override void OnBulletMissed(BulletMissedEvent evnt)
         {
-            base.OnBulletMissed(evnt);
+            publisher.Publish(evnt);
         }
 
         public override void OnDeath(DeathEvent evnt)
         {
-            base.OnDeath(evnt);
+            publisher.Publish(evnt);
         }
 
         public override void OnHitByBullet(HitByBulletEvent evnt)
         {
-            base.OnHitByBullet(evnt);
+            publisher.Publish(evnt);
         }
 
         public override void OnHitRobot(HitRobotEvent evnt)
         {
-            base.OnHitRobot(evnt);
+            publisher.Publish(evnt);
         }
 
         public override void OnHitWall(HitWallEvent evnt)
         {
-            base.OnHitWall(evnt);
-            TurnRight(180);
+            publisher.Publish(evnt);
         }
 
         public override void OnRobotDeath(RobotDeathEvent evnt)
         {
-            base.OnRobotDeath(evnt);
+            publisher.Publish(evnt);
         }
 
         public override void OnScannedRobot(ScannedRobotEvent evnt)
         {
-            base.OnScannedRobot(evnt);
-            TurnGunLeft(Heading - evnt.Bearing);
-            Fire(10);
+            publisher.Publish(evnt);
         }
 
         public override void OnWin(WinEvent evnt)
         {
-            base.OnWin(evnt);
+            publisher.Publish(evnt);
         }
 
         public override void OnRoundEnded(RoundEndedEvent evnt)
         {
-            base.OnRoundEnded(evnt);
+            publisher.Publish(evnt);
         }
 
         public override void OnBattleEnded(BattleEndedEvent evnt)
         {
-            base.OnBattleEnded(evnt);
+            publisher.Publish(evnt);
         }
 
         public override bool IsAdjustGunForRobotTurn
