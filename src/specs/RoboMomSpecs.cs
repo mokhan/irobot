@@ -9,7 +9,7 @@ namespace specs
     {
         Establish context = () =>
         {
-            publisher = Mock.An<IPublishEvents>();
+            publisher = Mock.an<IPublishEvents>();
             sut = new RoboMom(publisher);
         };
 

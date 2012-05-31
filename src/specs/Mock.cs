@@ -5,7 +5,7 @@ namespace specs
 {
     public static class Mock
     {
-        public static T An<T>() where T : class
+        public static T an<T>() where T : class
         {
             return MockRepository.GenerateMock<T>();
         }
@@ -13,6 +13,11 @@ namespace specs
         public static void received<T>(this T mock, Action<T> command)
         {
             mock.AssertWasCalled(command);
+        }
+
+        public static void should_not_have_received<T>(this T mock, Action<T> command)
+        {
+            mock.AssertWasNotCalled(command);
         }
     }
 }
